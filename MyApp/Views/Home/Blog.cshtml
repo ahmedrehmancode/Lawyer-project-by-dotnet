@@ -1,0 +1,301 @@
+﻿@{
+    // Layout = null;
+}
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container py-5">
+            <h1 class="display-3 fw-bold mb-3">Legal Insights & News</h1>
+            <p class="lead">Stay informed with the latest legal updates and expert advice</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search articles..." id="searchInput">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="criminal">Criminal Law</option>
+                        <option value="family">Family Law</option>
+                        <option value="corporate">Corporate Law</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="immigration">Immigration</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Featured Article</h2>
+            <div class="card shadow-lg border-0 mb-5">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://via.placeholder.com/600x400/0d6efd/ffffff?text=Featured+Article" class="img-fluid rounded-start h-100" alt="Featured">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary mb-2">Criminal Law</span>
+                            <h3 class="card-title fw-bold mb-3">Understanding Your Rights During an Arrest</h3>
+                            <p class="card-text text-muted mb-3">Learn about your constitutional rights and what you should do if you find yourself being arrested. This comprehensive guide covers everything from Miranda rights to the importance of legal representation.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/50/6c757d/ffffff?text=JS" class="rounded-circle me-3" alt="Author">
+                                <div>
+                                    <p class="mb-0 fw-bold">John Smith</p>
+                                    <p class="mb-0 small text-muted"><i class="bi bi-calendar me-1"></i>November 15, 2025 • 5 min read</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Latest Articles</h2>
+            <div class="row">
+                <!-- Blog Post 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://via.placeholder.com/400x250/198754/ffffff?text=Family+Law" class="card-img-top" alt="Blog 1">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Family Law</span>
+                            <h5 class="card-title fw-bold">Divorce Process: What to Expect</h5>
+                            <p class="card-text text-muted small">A step-by-step guide to understanding the divorce process, from filing to final decree.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/40/6c757d/ffffff?text=SJ" class="rounded-circle me-2" alt="Author">
+                                <div>
+                                    <p class="mb-0 small fw-bold">Sarah Johnson</p>
+                                    <p class="mb-0 small text-muted">Nov 12, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-success btn-sm w-100">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://via.placeholder.com/400x250/6c757d/ffffff?text=Corporate+Law" class="card-img-top" alt="Blog 2">
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">Corporate Law</span>
+                            <h5 class="card-title fw-bold">Starting a Business: Legal Essentials</h5>
+                            <p class="card-text text-muted small">Essential legal considerations every entrepreneur should know before launching their business.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/40/6c757d/ffffff?text=MC" class="rounded-circle me-2" alt="Author">
+                                <div>
+                                    <p class="mb-0 small fw-bold">Michael Chen</p>
+                                    <p class="mb-0 small text-muted">Nov 10, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-secondary btn-sm w-100">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://via.placeholder.com/400x250/dc3545/ffffff?text=Real+Estate" class="card-img-top" alt="Blog 3">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Real Estate</span>
+                            <h5 class="card-title fw-bold">Home Buying Legal Checklist</h5>
+                            <p class="card-text text-muted small">Protect your investment with this comprehensive legal checklist for home buyers.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/40/6c757d/ffffff?text=ED" class="rounded-circle me-2" alt="Author">
+                                <div>
+                                    <p class="mb-0 small fw-bold">Emily Davis</p>
+                                    <p class="mb-0 small text-muted">Nov 8, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-danger btn-sm w-100">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://via.placeholder.com/400x250/0dcaf0/ffffff?text=Immigration" class="card-img-top" alt="Blog 4">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Immigration</span>
+                            <h5 class="card-title fw-bold">Visa Application Guide 2025</h5>
+                            <p class="card-text text-muted small">Updated guide on visa applications, requirements, and common pitfalls to avoid.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/40/6c757d/ffffff?text=DM" class="rounded-circle me-2" alt="Author">
+                                <div>
+                                    <p class="mb-0 small fw-bold">David Martinez</p>
+                                    <p class="mb-0 small text-muted">Nov 5, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-info btn-sm w-100">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://via.placeholder.com/400x250/0d6efd/ffffff?text=Criminal+Law" class="card-img-top" alt="Blog 5">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Criminal Law</span>
+                            <h5 class="card-title fw-bold">DUI Defense Strategies</h5>
+                            <p class="card-text text-muted small">Understanding effective defense strategies for DUI charges and protecting your driving privileges.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/40/6c757d/ffffff?text=LB" class="rounded-circle me-2" alt="Author">
+                                <div>
+                                    <p class="mb-0 small fw-bold">Lisa Brown</p>
+                                    <p class="mb-0 small text-muted">Nov 3, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://via.placeholder.com/400x250/198754/ffffff?text=Family+Law" class="card-img-top" alt="Blog 6">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Family Law</span>
+                            <h5 class="card-title fw-bold">Child Custody Rights Explained</h5>
+                            <p class="card-text text-muted small">Everything parents need to know about child custody laws and their parental rights.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/40/6c757d/ffffff?text=SJ" class="rounded-circle me-2" alt="Author">
+                                <div>
+                                    <p class="mb-0 small fw-bold">Sarah Johnson</p>
+                                    <p class="mb-0 small text-muted">Nov 1, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-success btn-sm w-100">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Blog pagination">
+                <ul class="pagination justify-content-center mt-5">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <i class="bi bi-envelope-heart fs-1 mb-3"></i>
+                    <h2 class="fw-bold mb-3">Subscribe to Our Newsletter</h2>
+                    <p class="lead mb-4">Get the latest legal insights and updates delivered directly to your inbox</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-light btn-lg">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4 text-center">Browse by Category</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card border-primary">
+                        <div class="card-body text-center">
+                            <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>
+                            <h5 class="card-title fw-bold">Criminal Law</h5>
+                            <p class="card-text text-muted small">15 Articles</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Articles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card border-success">
+                        <div class="card-body text-center">
+                            <i class="bi bi-people fs-1 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">Family Law</h5>
+                            <p class="card-text text-muted small">12 Articles</p>
+                            <a href="#" class="btn btn-outline-success btn-sm">View Articles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card border-secondary">
+                        <div class="card-body text-center">
+                            <i class="bi bi-briefcase fs-1 text-secondary mb-3"></i>
+                            <h5 class="card-title fw-bold">Corporate Law</h5>
+                            <p class="card-text text-muted small">18 Articles</p>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">View Articles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

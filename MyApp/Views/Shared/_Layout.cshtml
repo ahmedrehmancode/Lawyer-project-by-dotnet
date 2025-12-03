@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-dark" href="@Url.Action("index", "home")">Navbar</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item text-dark"><a class="nav-link text-dark" href="@Url.Action("index", "Home")">Home</a></li>
+                    <li class="nav-item text-dark"><a class="nav-link text-dark" href="@Url.Action("about", "Home")">About</a></li>
+                    <li class="nav-item text-dark"><a class="nav-link text-dark" href="@Url.Action("contact", "Home")">Contact</a></li>
+                    <li class="nav-item text-dark"><a class="nav-link text-dark" href="@Url.Action("blog", "Home")">Blog</a></li>
+                    @* <li class="nav-item"><a class="nav-link" href="@Url.Action("registerlawyer", "Home")">Register Lawyer</a></li> *@
+                </ul>
+
+
+
+
+                <!-- Right Side Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="authDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        Sign Up
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="authDropdown">
+                        <li><a class="dropdown-item" href="@Url.Action("login", "home")">Login</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("signup", "home")">Sign up</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("registerlawyer", "home")">Register as Lawyer</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Law Firm</h5>
+                    <p class="text-white-50">Professional legal services you can trust.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>123 Legal Street, City</p>
+                    <p class="mb-1"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                    <p class="mb-1"><i class="bi bi-envelope me-2"></i>info@lawfirm.com</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Law Firm. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
