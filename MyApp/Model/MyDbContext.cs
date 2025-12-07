@@ -10,5 +10,6 @@ namespace MyApp.Data
         }
         public DbSet<Client> T_Students { get; set; }
         public DbSet<LawyerRegistration> RegisterLawyers { get; set; }
+        public DbSet<signup> signupdetail { get; set; }
     }
 }

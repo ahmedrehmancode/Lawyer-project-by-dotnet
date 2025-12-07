@@ -3,6 +3,7 @@ using MyApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvc();
+builder.Services.AddSession();
 builder.Services.AddDbContext<MyDbContext>(opt => opt.UseSqlServer(
     builder.Configuration.GetConnectionString("Dbconnection")));
 var app = builder.Build();
@@ -14,5 +15,6 @@ var app = builder.Build();
 app.MapControllerRoute(
     name: "Home Page",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseSession();
 
 app.Run();

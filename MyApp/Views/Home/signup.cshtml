@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,11 +19,11 @@
 
                 <h3 class="text-center mb-4">Login</h3>
 
-                <form method="post" action="@Url.Action("Login", "home")">
+                <form method="post">
                     <!-- Name -->
                     <div class="mb-3">
                         <label class="form-label">Name</label>
-                        <input type="text" name="Password" class="form-control" placeholder="Enter Password" required />
+                        <input type="text" name="name" class="form-control" placeholder="Enter Password" required />
                     </div>
                      
                     <!-- Email -->
@@ -33,14 +35,14 @@
                     <!-- Password -->
                     <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input type="password" name="Password" class="form-control" placeholder="Enter Password" required />
+                        <input type="password" name="password" class="form-control" placeholder="Enter Password" required />
                     </div>
                     Reinter password for cheack
-                    <div class="mb-3">
+                    @* <div class="mb-3">
                         <label class="form-label">Password</label>
                         <input type="password" name="Password" class="form-control" placeholder="Enter Password" required />
                         <input type="checkbox" name="name" value=""  id="check"/>
-                    </div>
+                    </div> *@
 
                     
 

@@ -41,6 +41,7 @@ namespace MyApp.Controllers
         }
         public IActionResult Blog()
         {
+            //ViewBag.hidebutton = true;
             return View();
         }
 
@@ -89,15 +90,66 @@ namespace MyApp.Controllers
             return View("index");
 
         }
+        [HttpPost]
+        public IActionResult signup(signup signin)
+        {
+            _context.signupdetail.Add(signin);
+            _context.SaveChanges();
+            return RedirectToAction("Login");
+        }
+
         public IActionResult Signup()
         {
-            var lawyer = _context.RegisterLawyers.ToList();
-            return View(lawyer);
+            return View();
+
+
         }
         public IActionResult Login()
         {
             return View();
 
+        }
+        [HttpPost]
+        public IActionResult Login(string uemail, string upass)
+        {
+            var idintify = _context.signupdetail.FirstOrDefault(u => u.Email == uemail);
+            if (idintify != null && idintify.Password == upass)
+            {
+                HttpContext.Session.SetString("Name", idintify.Name);
+                return RedirectToAction("Dashboard");
+            }
+            else
+            {
+
+                //return RedirectToAction("dashboard");
+
+
+                ViewBag.error = "Invalid email or password";
+                return View();
+            }
+
+        }
+
+        public IActionResult Dashboard()
+        {
+            ViewBag.showbutton = true;
+            ViewBag.hidebutton = true;
+            if (HttpContext.Session.GetString("Name") != null)
+            {
+                ViewBag.name = HttpContext.Session.GetString("Name");
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+
+
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login");
         }
 
 
