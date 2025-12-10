@@ -27,7 +27,7 @@ namespace MyApp.Model
         [Required(ErrorMessage = "Location is required")]
         public string Location { get; set; }
 
-        [Required(ErrorMessage = "File is required")]
+        //[Required(ErrorMessage = "File is required")]
 
         public string File { get; set; }
     }

@@ -4,18 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 
 using MyApp.Data;
 using MyApp.Model;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyApp.Controllers
 {
     public class HomeController : Controller
     {
         private MyDbContext _context;
+        private IWebHostEnvironment _env;
 
-
-        public HomeController(MyDbContext context)
+        public HomeController(MyDbContext context, IWebHostEnvironment env)
         {
             _context = context;
-
+            _env = env;
         }
         public IActionResult Index()
         {
@@ -83,8 +84,20 @@ namespace MyApp.Controllers
 
         }
         [HttpPost]
-        public IActionResult RegisterLawyer(LawyerRegistration lawyer)
+        public IActionResult RegisterLawyer(LawyerRegistration lawyer, IFormFile File)
         {
+            //if (File == null || File.Length == 0)
+            //{
+            //    ViewBag.Error = "Please upload an image.";
+            //    //return View();
+            //}
+            var filename = Path.GetFileName(File.FileName);
+            var filepath = Path.Combine(_env.WebRootPath, "LawyerImages", filename);
+            using (FileStream fs = new FileStream(filepath, FileMode.Create))
+            {
+                File.CopyTo(fs);
+            }
+            lawyer.File = filename;
             _context.RegisterLawyers.Add(lawyer);
             _context.SaveChanges();
             return View("index");

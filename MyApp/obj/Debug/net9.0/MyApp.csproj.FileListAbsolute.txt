@@ -485,3 +485,4 @@ C:\just  for  code\dotnet\MyApp\MyApp\obj\Debug\net9.0\MyApp.pdb
 C:\just  for  code\dotnet\MyApp\MyApp\obj\Debug\net9.0\MyApp.genruntimeconfig.cache
 C:\just  for  code\dotnet\MyApp\MyApp\obj\Debug\net9.0\ref\MyApp.dll
 C:\just  for  code\dotnet\MyApp\MyApp\obj\Debug\net9.0\MyApp.sourcelink.json
+C:\just  for  code\dotnet\MyApp\MyApp\bin\Debug\net9.0\MyApp.staticwebassets.runtime.json

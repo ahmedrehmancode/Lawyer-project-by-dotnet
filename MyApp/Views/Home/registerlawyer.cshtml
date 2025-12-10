@@ -15,7 +15,7 @@
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h3 class="card-title mb-4 text-center">Lawyer Registration</h3>
-                        <form action="#" method="post">
+                        <form action="#" method="post" enctype="multipart/form-data">
 
                             <div class="mb-3">
                                 <label for="Name" class="form-label">Full Name</label>
@@ -53,6 +53,11 @@
                                 <label for="location" class="form-label">Location</label>
                                 <input type="text" class="form-control" id="location" name="Location" placeholder="Enter city or address" required>
                             </div>
+                              <div class="mb-3">
+                                <label for="file" class="form-label">UPload Your Imgae</label>
+                                <input type="file" class="form-control" id="file" name="File"  required>
+                            </div>
+
 
                             <button type="submit" class="btn btn-primary w-100">Register</button>
                         </form>
